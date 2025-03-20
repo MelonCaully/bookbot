@@ -3,7 +3,7 @@ def get_num_of_words(file_text):
     word_count = 0
     for word in file_text.split():
         word_count += 1
-    return print(f"{word_count} words found in the document")
+    return word_count
 
 def get_num_of_characters(file_text):
     char_count = {}
@@ -15,4 +15,11 @@ def get_num_of_characters(file_text):
     return char_count
 
 def sort_dictionary(dictionary):
-    return None
+    sort_list = []
+    for char in dictionary:
+        sort_list.append({"char": char, "num": dictionary[char]})
+    sort_list.sort(reverse=True, key=on_sort)
+    return sort_list
+
+def on_sort(dict):
+    return dict["num"]
