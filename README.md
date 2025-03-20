@@ -10,4 +10,4 @@ mobydick.txt
 
 frankenstein.txt
 
-Use  python3 main.py <path file for book> to run the program
+Use  python3 main.py "path for file" to run the program
